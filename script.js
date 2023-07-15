@@ -1,16 +1,17 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 //I need to write out several arrays to include into the password array
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+//lowerCase will be used as "Master" array, all other arrays added in as per user input
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = lowerCase;
 
   passwordText.value = password;
 
@@ -23,19 +24,30 @@ window.alert("Ready to get started? I just need to ask a couple of questions!");
 // var hasLower = window.confirm("Should the password include lowercase letters?") - Redundant? Password must include lowercase letters to form body. 
 
 //first prompt is uppercase 
-var hasUpper = window.confirm("Should the password include uppercase letters?"){
-  if: (hasUpper){
-    hasUpper = password.text;
-  }
+var hasUpper = window.confirm("Should the password include uppercase letters?")
+if(hasUpper){
+passwordText = passwordText.push(hasUpper);
 }
-if !(hasUpper){
-
-};
+else if (!hasUpper){
+passwordText = passwordText;
+}
 
 //second prompt will be numeric values, which will add a numeric array to the password array
-var hasNumbers = window.confirm("Should the password include numeric characters? Press okay!");
+var hasNumbers = window.confirm("Should the password include numeric characters?")
+if(hasNumbers){
+  passwordText = passwordText.push(hasNumbers);
+}
+else if (!hasNumbers){
+  passwordText = passwordText;
+}
 //third prompt will add a special characters array to password array
-var hasSpecial = window.confirm("Should the password include special characters? Press okay!");
+var hasSpecial = window.confirm("Should the password include special characters?")
+if(hasSpecial){
+  passwordText = passwordText.push(specialChars);
+}
+else if (!hasSpecial){
+  passwordText = passwordText;
+}
 
 //Last prompt should be length of password, between 8 and 128
 // this answer should plug into password.length array. Need a way to keep the answer within those parameters, probably if > < 
