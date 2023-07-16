@@ -11,60 +11,71 @@ var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = lowerCase;
-
+  var passwordText = document.querySelector("#password");;
+  
   passwordText.value = password;
-
 }
+function generatePassword() {
 
 window.alert("Ready to get started? I just need to ask a couple of questions!");
+
+//Empty array to store chars for password
+var passwordArray = [];
+
 //I need a prompt (or several prompts?) describing the parameters of the password to be generated
 
-//second prompt is including lowercase letters
-// var hasLower = window.confirm("Should the password include lowercase letters?") - Redundant? Password must include lowercase letters to form body. 
 
 //first prompt is uppercase 
-var hasUpper = window.confirm("Should the password include uppercase letters?")
-if(hasUpper){
-passwordText = passwordText.push(hasUpper);
-}
-else if (!hasUpper){
-passwordText = passwordText;
-}
-
-//second prompt will be numeric values, which will add a numeric array to the password array
-var hasNumbers = window.confirm("Should the password include numeric characters?")
-if(hasNumbers){
-  passwordText = passwordText.push(hasNumbers);
-}
-else if (!hasNumbers){
-  passwordText = passwordText;
-}
-//third prompt will add a special characters array to password array
-var hasSpecial = window.confirm("Should the password include special characters?")
-if(hasSpecial){
-  passwordText = passwordText.push(specialChars);
-}
-else if (!hasSpecial){
-  passwordText = passwordText;
+// var hasUpper = window.confirm("Should the password include uppercase letters?");
+// if(hasUpper){
+//   passwordArray = passwordArray.concat(hasUpper);
+// }
+var hasUpper = window.confirm("Should the password include uppercase letters?");
+if (hasUpper) {
+  passwordArray = passwordArray.concat(upperCase);
 }
 
+//second prompt is including lowercase letters
+var hasLower = window.confirm("Should the password include lowercase letters?");
+if (hasLower) {
+  passwordArray = passwordArray.concat(lowerCase);
+}
+
+//third prompt will be numeric values, which will add a numeric array to the password array
+var hasNumbers = window.confirm("Should the password include numeric characters?");
+if (hasNumbers) {
+  passwordArray = passwordArray.concat(numbers);
+}
+//fourth prompt will add a special characters array to password array
+var hasSpecial = window.confirm("Should the password include special characters?");
+if (hasSpecial) {
+  passwordArray = passwordArray.concat(specialChars);
+}
 //Last prompt should be length of password, between 8 and 128
-// this answer should plug into password.length array. Need a way to keep the answer within those parameters, probably if > < 
-var passwordLength = window.prompt("How long should the password be? Please enter a numeric value between 8 and 128");
-//when all prompts are answered, all selected arrays should be combined and password will be generated from the "main" array, using .length
+// this answer should plug into passwordArray
 
+var passwordLength = window.prompt("How long should the password be? Please enter a numeric value between 8 and 128")
+if (passwordLength < 8 || passwordLength > 128) {
+  window.alert("Please enter a number between 8 and 128.");
+  return;
+}
 
+  var password = " ";
+  for (var i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * passwordArray.length);
+    password += passwordArray[randomIndex];
+  }
+  console.log(password)
+  return password;
+  
+}
 
+// function generatePassword(length) {
 
+// // window.alert("Your new password is: " + password)
 
-// function generatePassword(); !!activate when ready!!
-
-window.alert("Your new password is: " + password)
-
-
+// }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
