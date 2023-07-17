@@ -17,14 +17,10 @@ The major takeaway I had from this project, however, was the importance of psued
 [In these screens, use the buttons to give a yes or no input. Okay will mean yes, and cancel will mean no.](assets/Images/screen4.png)
 [Shows final screen, with a generated password, given inputed parameters](assets/Images/screen5.png)
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Tutorials/Instructional pages:
 https://stackoverflow.com/questions/44051044/combining-arrays-loops-and-if-statements
 https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+https://stackoverflow.com/questions/54027176/checking-input-type-in-js
 
 ## License
 MIT License
