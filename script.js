@@ -1,7 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 //I need to write out several arrays to include into the password array
-//lowerCase will be used as "Master" array, all other arrays added in as per user input
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -22,14 +21,10 @@ window.alert("Ready to get started? I just need to ask a couple of questions!");
 //Empty array to store chars for password
 var passwordArray = [];
 
-//I need a prompt (or several prompts?) describing the parameters of the password to be generated
+//I need prompts to describe the parameters of the password to be generated, via user input 
 
 
 //first prompt is uppercase 
-// var hasUpper = window.confirm("Should the password include uppercase letters?");
-// if(hasUpper){
-//   passwordArray = passwordArray.concat(hasUpper);
-// }
 var hasUpper = window.confirm("Should the password include uppercase letters?");
 if (hasUpper) {
   passwordArray = passwordArray.concat(upperCase);
@@ -69,13 +64,6 @@ if (passwordLength < 8 || passwordLength > 128) {
   return password;
   
 }
-
-// function generatePassword(length) {
-
-// // window.alert("Your new password is: " + password)
-
-// }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
