@@ -1,34 +1,12 @@
-# Password-Generator
-Random password generator for use commercially or professionally. 
 
-Acceptance Criteria
-
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-
-# <Your-Project-Title>
+# <Password-Generator>
 
 ## Description
+I was told many times in the leadup to this week that Javascript was the hardest part of the bootcamp, and that the intro section was particularly hard. I found it to be a challenging beginning to my relationship with Javascript, but, versatility and usefulness are apparent. The challenge was a great way to familiarize myself with intro concepts, and it felt extremely rewarding to work through. 
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+At the beginning of the project, I did not feel comfortable with the concepts presented (variables, math functions, ect.) I have a much firmer grasp of those concepts now, in thanks to the research necessary. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+The major takeaway I had from this project, however, was the importance of psuedo-coding, and it's impact on working though problems. The impact it had on my direction and comfort with the project was instantaneous. 
 
 
 ## Usage
@@ -39,6 +17,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ![alt text](assets/images/screenshot.png)
 
+[First, homepage. Click Generate password to begin](assets/Images/screen1.png)
+[Click okay to continue](assets/Images/screen2.png)
+[At this point, enter a numeric value within given parameters. If not within those parameters, error and return will occur](assets/Images/screen3.png)
+[In these screens, use the buttons to give a yes or no input. Okay will mean yes, and cancel will mean no.](assets/Images/screen4.png)
+[Shows final screen, with a generated password, given inputed parameters](assets/Images/screen5.png)
 ## Credits
 
 List your collaborators, if any, with links to their GitHub profiles.
@@ -46,29 +29,25 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
+https://stackoverflow.com/questions/44051044/combining-arrays-loops-and-if-statements
+https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
 
 ## License
+MIT License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+Copyright (c) 2023 kalaniJ94
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
-## Badges
 
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
 
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here
+If you see anything that can be improved upon in this code, please feel free to reach out! I am new to this environment and as they say, collaboration is key!
