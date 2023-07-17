@@ -11,12 +11,6 @@ The major takeaway I had from this project, however, was the importance of psued
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
-
 [First, homepage. Click Generate password to begin](assets/Images/screen1.png)
 [Click okay to continue](assets/Images/screen2.png)
 [At this point, enter a numeric value within given parameters. If not within those parameters, error and return will occur](assets/Images/screen3.png)
