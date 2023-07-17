@@ -54,6 +54,12 @@ if (passwordLength < 8 || passwordLength > 128) {
   window.alert("Please enter a number between 8 and 128.");
   return;
 }
+if (isNaN(passwordLength)){
+  window.alert("Please enter numbers only. Try again!");
+  return;
+}
+
+
 
   var password = " ";
   for (var i = 0; i < passwordLength; i++) {
